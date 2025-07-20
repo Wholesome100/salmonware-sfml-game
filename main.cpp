@@ -22,7 +22,7 @@ int main()
 
         window.clear();
 
-        float scalefactor = std::sin(clock.getElapsedTime().asSeconds());
+        float scalefactor{ std::abs(std::sin(clock.getElapsedTime().asSeconds())) };
         std::cout << std::sin(clock.getElapsedTime().asSeconds());
         shape.setScale({ scalefactor, scalefactor });
         window.draw(shape);
